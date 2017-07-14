@@ -1,0 +1,705 @@
+/********************************************
+* GENERAL STYLING
+********************************************/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Coda', sans-serif;
+}
+
+/* Regular columns */
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+/* Columns that have specific responsive logic */
+.rspn-col-1 {width: 8.33%;}
+.rspn-col-2 {width: 16.66%;}
+.rspn-col-3 {width: 25%;}
+.rspn-col-4 {width: 33.33%;}
+.rspn-col-5 {width: 41.66%;}
+.rspn-col-6 {width: 50%;}
+.rspn-col-7 {width: 58.33%;}
+.rspn-col-8 {width: 66.66%;}
+.rspn-col-9 {width: 75%;}
+.rspn-col-10 {width: 83.33%;}
+.rspn-col-11 {width: 91.66%;}
+.rspn-col-12 {width: 100%;}
+
+[class*="col-"]{
+    float: left;
+    padding: 15px; /* adjust as needed */
+    /*border: 1px solid blue;*/
+}
+
+.row{
+    width: 100%;   
+    float: left;
+    /* pading: 15px */
+    /*border: 1px solid blue;*/    
+}
+
+
+@media only screen and (max-width: 1065px) {
+    /* For mobile phones or small screen: */
+    [class*="col-"] {
+        width: 100%;
+    }
+    
+    .nav-middle
+    {
+        position: absolute;
+    }
+    
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+a:visited{
+    color: inherit;
+}
+
+.img-responsive{
+    max-width: 100%;
+}
+
+#container{
+    /* Adjust to fill screen to preference */
+    width: 100%;
+    margin: auto; /* Keeps margin widths equal - only if width is less than 100% */
+    font-family: sans-serif;
+}
+
+.parallax{
+    background-image: url(images/universe.jpg);   
+    height: 400px;
+    line-height: 400px; /* must match height to center text within the div */   
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    vertical-align: middle;      
+}
+
+.city-background{
+    height: 200px;
+    background-image: url(Images/skyscraper.png);
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/********************************************
+* NAVBAR STYLING
+*
+* The navbar changes into an accordion style
+* once screen size reaches a certain minimum
+********************************************/
+
+/* Row for navigation logo */
+.nav-logo
+{
+    background-image: url(Images/abstract.jpg);
+    text-align: center;
+}
+
+/* Logo image styling */
+.nav-logo img
+{
+    height: 400px;
+    width: 400px;
+}
+
+.nav
+{
+    background-color: rgb(230,230,230);
+    text-align: center;
+}
+
+.nav ul
+{
+    
+}
+
+.nav li
+{
+    font-size: 2.5em;
+    display: inline;
+    padding: 0 50px 0 50px;
+}
+
+.nav li:hover
+{
+    cursor: pointer;
+    background-color: rgb(210,210,210);
+}
+
+
+/* First media query */
+
+@media only screen and (max-width: 1320px) {
+    
+}
+
+/* Mobile Nav */
+
+@media only screen and (max-width: 1032px) {
+    .nav-left, .nav-right
+    {
+        visibility: hidden;                 
+    }
+    
+}
+/********************************************
+* MAIN STYLING
+*
+* The navbar changes into an accordion style
+* once screen size reaches a certain minimum
+********************************************/
+
+.half-width
+{
+    /* Used for half width <hr> */
+    width: 50%;
+    margin: auto;
+}
+
+.three-quarters
+{
+    /* Used for three quarter width <hr> */
+    width: 50%;
+    margin: auto;
+}
+.nine-tenths
+{
+    width: 90%;
+    margin: auto;
+}
+h1{
+    font-size: 3em;
+}
+
+h2{
+    font-size: 2.5em;
+}
+
+h3{
+    font-size: 2em;
+}
+
+h4{
+    font-size: 1.2em; /* Make this h5 */
+}
+main{
+    color: white;
+}
+
+p{
+    font-size: 1.3em;
+}
+.blue{
+    background-color: rgb(0, 79, 216);
+}
+
+.darker-blue{
+    background-color: rgb(30, 78, 154);
+}
+
+.grey{
+    background-color: rgb(220, 220, 220);
+}
+
+.lighter-blue{
+    background-color: rgb(0, 89, 226);
+}
+
+.intro-div
+{
+    height: 600px;
+    background-image: url(Images/main/modern-buildings_dark.png);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+.intro-div h1
+{
+    position: relative;
+    padding-bottom: 30px;
+}
+
+@keyframes IntroAppear
+{
+    from {color: rgba(255,255,255, 0.0); top: -20px;}
+    to   {color: rgba(255,255,255, 1); top: 0px;}
+}
+
+.intro-div-text
+{
+    position: relative;
+    padding: 20px 100px 20px 100px;
+    text-align: center;
+    animation: IntroAppear 1s linear;
+}
+
+.intro-div-button
+{
+    height: 50px;
+    width: 250px;
+    border: 2px solid white;
+    background-color: rgba(255,255,255, 0.3);
+}
+
+.process-div
+{
+    padding: 10px 100px 10px 100px;; /* Lower this when screen size gets to certain point */
+    color: black;
+    background-color: rgb(245, 245, 245);
+    padding-bottom: 20px;
+}
+
+/* Intro div for process related information */
+.process-intro-div
+{
+    background-color: rgb(210,210,210);
+    color: rgb(80,80,80);
+    text-align: center;
+    animation-name: fromLeft;
+}
+
+@keyframes slideFromLeft
+{
+    0%
+    {
+        
+    }
+    
+}
+
+/* Row for grouping of process blocks */
+.process-div-row
+{
+    width: 100%;
+    float: left;
+
+}
+
+/* Process block - contains image and descriion for an individual process item */
+.process-block
+{
+    
+}
+
+
+.process-block:hover
+{
+    
+}
+
+.process-block h2
+{
+    color: rgb(0, 89, 226);
+    display: inline-block;
+    text-align: left;
+}
+
+/* Image in a process block */
+.process-block img
+{
+    float: left;
+    max-width: 300px;    
+    margin-right: 10px;
+}
+
+/******************************/
+/********** SERVICES **********/
+/******************************/
+
+.services
+{
+    background-color: rgb(0, 69, 206);
+}
+
+.services p
+{
+    font-size: 1.5em;
+}
+.services-intro
+{
+    text-align: center;
+    padding-bottom: 20px;
+}
+.services-intro h1
+{
+    font-size: 4em;
+}
+
+.services-row
+{
+    width: 100%;
+    float: left;
+    
+}
+
+.services-block
+{
+    background-color: rgb(0, 89, 226);
+    text-align: center;
+    border: 1px solid rgba(255,255,255,0.1);
+
+    height: 150px;
+    line-height: 125px;
+}
+
+#web-design-selection
+{
+    /*background-image: url(Images/main/city-streets_100.png);*/
+    background-position: bottom; 
+    transition: background-image 2s;
+}
+
+#web-design-selection:hover
+{
+    background-image: url(Images/main/city-streets_75.png);
+}
+
+.web-design-text
+{
+    background-image: url(Images/main/keyboard.png);
+    background-repeat: no-repeat;
+    background-position: top;
+ 
+    padding: 30px;
+}
+
+.web-design-image
+{
+    text-align: center;
+}
+
+.web-design-image img
+{
+    max-width: 500px;
+}
+
+.web-design-desc
+{
+    
+}
+
+.web-design-desc h1
+{
+    margin-bottom: 10px;
+    border-bottom: 2px solid rgb(100,100,100);
+}
+
+.web-design-list
+{
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(0,89,255,0.7);
+}
+
+.web-design-list ul
+{
+    color: white;
+    list-style-type: circle;
+    font-size: 2.4em;
+    font-weight: bold;
+}
+
+.web-design-list li
+{
+    display: inline;
+    text-transform: uppercase;
+    padding: 0 10px 0 10px;
+}
+
+.seo-design-text
+{
+    background-image: url(Images/main/watch.png);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    padding: 30px;
+}
+
+.seo-design-text h1
+{
+    margin-bottom: 10px;
+    border-bottom: 2px solid rgb(100,100,100);
+}
+
+.seo-design-image
+{
+    text-align: center;
+}
+
+.seo-design-image img
+{
+    max-width: 450px;
+}
+#seo-selection
+{
+    /*background-image: url(Images/main/keyboard_100.png);*/
+    background-position: bottom; 
+    transition: background-image 2s ease-in;
+}
+
+#seo-selection:hover
+{
+    background-image: url(Images/main/keyboard_75.png);
+}
+
+.service-active
+{
+    border: 1px solid white;
+}
+
+.services-block h2
+{
+    text-transform: uppercase;
+}
+
+@keyframes moveFromLeft
+{
+    from {left: 0px;}
+    to {text-align: center;}
+}
+
+/******************************/
+/********** MEET ME ***********/
+/******************************/
+
+.meet-me
+{
+    background-color: rgb(210,210,210);
+    color: rgb(80,80,80);
+    padding: 20px;
+}
+
+.pic-div
+{
+    text-align: center;
+}
+
+.meet-me-pic
+{
+    border-radius: 300px;
+}
+
+.meet-me-description
+{
+    
+}
+
+.meet-me-description h1
+{
+    text-align: left;
+    padding-left: 15px;
+    background-color: rgb(190,190,190);
+    margin-bottom: 20px;
+}
+
+.skills-div
+{
+    text-align: center;
+}
+
+
+
+
+
+.main-text-div
+{
+    font-size: 1.2em;
+}
+
+.main-img-div
+{
+    text-align: center;
+}
+
+
+
+.reasons-div{
+    text-align: center;
+    background-image: url(Images/skyline-600001_1920.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;   
+    box-shadow: inset 0 0 0 300px rgba(16, 50, 85, 0.88);
+}
+
+.reasons-div img
+{
+    text-align: center;
+    height: 250px;
+}
+
+.reasons-text-div
+{
+    color: black;
+    text-align: center;
+}
+
+.reasons-text-div p{
+    font-size: 1.2em;
+}
+
+/********************************************
+* SERVICES STYLING
+*
+*
+********************************************/
+
+/********************************************
+* SERVICES MODAL
+*
+*
+********************************************/
+
+/* This class greys out the background to make the modal more apparent*/
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 1; /* Sit on top */
+    padding-top: 10px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* This is the actual service modal */
+.services-modal{
+    color: black;
+    background-color: white;
+    margin: auto;
+    border: 1px solid black;
+    width: 50%;
+    animation-name: modalAppear;
+    animation-duration: 0.4s;
+}
+
+/* Animation for modal */
+
+@keyframes modalAppear
+{
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+}
+
+
+
+.close{
+    float: right;
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+.close:hover{
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.service-header{
+    color: white;
+    padding: 20px;
+    background-color: rgb(31, 82, 164);
+}
+
+.service-form{
+    padding: 20px;
+    margin-top: 10px;
+}
+
+.service-form label{
+    font-weight: bold;
+    display: block;
+    border-bottom: 1px solid grey;
+}
+
+input, select, textarea{
+    width: 100%;
+    font-size: 1.1em
+}
+
+input, select, textarea{
+    padding: 12px 20px;
+    margin: 8px 0;
+}
+
+textarea{
+    resize: none;
+}
+
+input[type=text]:focus{
+    border: 3px solid #ccc;
+}
+
+input[type=submit]{
+    color: white;
+    background-color: rgb(31, 82, 164);
+    
+}
+
+input[type=submit]:hover{
+    background-color: rgb(11, 62, 144); 
+}
+
+/********************************************
+* SLIDESHOW STYLING
+*
+* This is the styling for slideshows
+********************************************/
+
+
+/********************************************
+* PORTFOLIO STYLING
+*
+* 
+* 
+********************************************/
+
+
+/********************************************
+* MEET ME STYLING
+*
+* The navbar changes into an accordion style
+* once screen size reaches a certain minimum
+********************************************/
+
+/********************************************
+* FOOTER STYLING
+*
+* The navbar changes into an accordion style
+* once screen size reaches a certain minimum
+********************************************/
+
+footer
+{
+    height: 75px;
+    background-color: rgb(60,60,60);
+    line-height: 75px;
+    text-align: center;
+    color: white;
+}
