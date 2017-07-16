@@ -240,6 +240,8 @@ p{
 
 .intro-div h1
 {
+    
+    text-transform: uppercase;
     position: relative;
     padding-bottom: 30px;
 }
@@ -258,12 +260,16 @@ p{
     animation: IntroAppear 1s linear;
 }
 
-.intro-div-button
+.intro-button
 {
-    height: 50px;
-    width: 250px;
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 10px 10px 10px;
     border: 2px solid white;
-    background-color: rgba(255,255,255, 0.3);
+    text-transform: uppercase;
+    background-color: rgb(0, 130, 255);
+    border-radius: 10px;
+    cursor: pointer;
 }
 
 .process-div
@@ -333,7 +339,7 @@ p{
 
 .services
 {
-    background-color: rgb(0, 69, 206);
+    background-color: rgb(210,210,210);
 }
 
 .services p
@@ -342,12 +348,18 @@ p{
 }
 .services-intro
 {
+    padding-top: 5px;
     text-align: center;
-    padding-bottom: 20px;
+    background-color: rgb(190,190,190);
+    /*(padding-bottom: 20px;*/
 }
 .services-intro h1
 {
+    color: rgb(90,90,90);
+    padding-right: 40px;
     font-size: 4em;
+    text-align: center;
+    text-shadow: 1px 1px rgb(100,100,100);
 }
 
 .services-row
@@ -379,80 +391,60 @@ p{
     background-image: url(Images/main/city-streets_75.png);
 }
 
-.web-design-text
+.seo
 {
-    background-image: url(Images/main/keyboard.png);
-    background-repeat: no-repeat;
-    background-position: top;
- 
-    padding: 30px;
+    background-color: rgb(200,200,200);
 }
 
-.web-design-image
+.web-design img, .seo img
+{
+    max-width: 700px;
+}
+
+.web-design-desc h1, .seo-design-desc h1
+{
+    text-transform: uppercase;
+    background-color: rgba(0, 89, 226, 0.8);
+    margin-bottom: 10px;
+    border-radius: 20px;
+}
+
+.web-design-desc p,.seo-design-desc p
+{
+    padding: 10px;
+    color: rgb(90,90,90);
+}
+
+.seo-design-desc, .web-design-desc
+{
+    padding: 20px;
+    text-align: center;
+
+}
+
+.seo-design-desc img, .web-design-desc img
+{
+    max-width: 750px;
+}
+
+.reasons
 {
     text-align: center;
-}
-
-.web-design-image img
-{
-    max-width: 500px;
-}
-
-.web-design-desc
-{
+    background-image: url(Images/main/watch_black.png);
+    background-position: bottom;
+    padding-bottom: 20px;
     
 }
 
-.web-design-desc h1
+.reasons-header
 {
-    margin-bottom: 10px;
-    border-bottom: 2px solid rgb(100,100,100);
+    padding: 20px;
+    background-color: rgba(0,0,0,0.5);
 }
 
-.web-design-list
+.test img
 {
-    text-align: center;
-    padding: 10px;
-    background-color: rgba(0,89,255,0.7);
-}
-
-.web-design-list ul
-{
-    color: white;
-    list-style-type: circle;
-    font-size: 2.4em;
-    font-weight: bold;
-}
-
-.web-design-list li
-{
-    display: inline;
-    text-transform: uppercase;
-    padding: 0 10px 0 10px;
-}
-
-.seo-design-text
-{
-    background-image: url(Images/main/watch.png);
-    background-position: bottom;
-    background-repeat: no-repeat;
-    padding: 30px;
-}
-
-.seo-design-text h1
-{
-    margin-bottom: 10px;
-    border-bottom: 2px solid rgb(100,100,100);
-}
-
-.seo-design-image
-{
-    text-align: center;
-}
-
-.seo-design-image img
-{
-    max-width: 450px;
+    max-width: 800px;
 }
 #seo-selection
 {
@@ -481,6 +473,28 @@ p{
     from {left: 0px;}
     to {text-align: center;}
 }
+
+/******************************
+********** PORTFOLIO **********
+******************************/
+
+.portfolio
+{
+    background-color: white;
+    color: rgb(90,90,90);
+}
+
+.portfolio-header
+{
+    text-align: center;
+    padding: 10px;
+}
+
+.portfolio-header h1
+{
+    font-size: 4em;
+}
+
 
 /******************************/
 /********** MEET ME ***********/
