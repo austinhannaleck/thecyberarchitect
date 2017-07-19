@@ -54,6 +54,7 @@
     /* For mobile phones or small screen: */
     [class*="col-"] {
         width: 100%;
+        text-align: center;
     }
     
     .nav-middle
@@ -303,7 +304,6 @@ p{
 {
     width: 100%;
     float: left;
-
 }
 
 /* Process block - contains image and descriion for an individual process item */
@@ -331,6 +331,14 @@ p{
     float: left;
     max-width: 300px;    
     margin-right: 10px;
+}
+
+@media only screen and (max-width: 1488px) 
+{
+    .process-block img
+    {
+        float: none;
+    }
 }
 
 /******************************/
@@ -401,9 +409,14 @@ p{
     background-color: rgb(190,190,190);
 }
 
+.seo-img-div
+{
+}
+
 .web-design img, .seo img
 {
-    max-width: 700px;
+    max-width: 100%;
+    height: auto;
 }
 
 .web-design-desc h1, .seo-design-desc h1
@@ -428,7 +441,8 @@ p{
 
 .seo img, .web-design img
 {
-    max-width: 750px;
+    max-width: 100%;
+    height: auto;
 }
 
 .reasons
@@ -526,6 +540,10 @@ p{
     text-align: center;
 }
 
+.pic-div img
+{
+    max-width: 100%;
+}
 .meet-me-pic
 {
     border-radius: 300px;

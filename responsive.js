@@ -14,7 +14,19 @@ $(document).ready(function()
 });
 })
 
+var SeoImage = document.getElementById('seo-img');
 
+window.onresize = function(event)
+{
+    if(1000 >= window.innerWidth)
+        {
+            document.getElementById('seo-img').src="Images/main/business.png";
+        }
+    else
+        {
+            document.getElementById('seo-img').src="Images/main/business_sideways.png";
+        }
+}
 
 /*
 const WINDOW_UPPER_MIN = 1320;
