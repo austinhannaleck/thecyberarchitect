@@ -18,7 +18,11 @@ var SeoImage = document.getElementById('seo-img');
 
 window.onresize = function(event)
 {
-    if(1000 >= window.innerWidth)
+    if(1392 <= window.innerWidth)
+    {
+            document.getElementById('seo-img').src="Images/main/business.png";
+    }
+    else if(1065 >= window.innerWidth)
         {
             document.getElementById('seo-img').src="Images/main/business.png";
         }
