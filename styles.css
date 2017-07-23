@@ -289,6 +289,14 @@ p{
     padding-bottom: 20px;
 }
 
+@media only screen and (max-width: 500px)
+{
+    .process-div
+    {
+        padding: 0px;
+    }
+}
+
 /* Intro div for process related information */
 .process-intro-div
 {
