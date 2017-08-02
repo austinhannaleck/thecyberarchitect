@@ -5,7 +5,7 @@ $lname = $_POST['lastname'];
 $email = $_POST['email'];
 $service = $_POST['services'];
 $message = $_POST['message'];
-$to = 'akh452@live.com';
+$to = 'ahannaleck1@gmail.com';
 $subject = "The Cyber Architect - New Form Submission";
 
 

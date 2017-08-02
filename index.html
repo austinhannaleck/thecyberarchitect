@@ -14,7 +14,7 @@
         <meta name="keywords" content="TAGS HERE seperated by comma and space"/>
        
         <link rel="stylesheet" href="styles.css"/>
-        <link href="https://fonts.googleapis.com/css?family=Coda" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Coda|Lato" rel="stylesheet">
         <link rel="icon" href=""/> <!-- Icon for tab-->
         <script type="text/javascript" language="Javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
         <script src="responsive.js"></script>
@@ -38,14 +38,10 @@
             <main class="">
                 <section class="intro-div row">
                     <h1>Find Your Digital Solution with The Cyber Architect</h1>
+                    <h3>Stand out from the crowd with intuitive, flexible designs</h3>
+                    <p>Constantly innovating, The Cyber Architect is here to build bulletproof products that will stand the test of time. With an effective, no-frills process, and previously unforeseen levels of consumer transparency, we not only build quality designs, but even stronger customer relationships. Try it today.</p>
                     <div class="intro-div-text">
-                        <h3>
-                            As the real world moves further and further into the digital, many people are feeling left in the dust. Although they may have the idea, they don't necesarilly have the skills or the time to bring their dreams into cyberspace.
-                        </h3>
-                        <br>
-                        <h3>
-                            The Cyber Architect is here to bridge that gap. From responsive, mobile-friendly website development, to user-friendly applications, we strive to create flexible, creative solutions. Our designs are crafted with the user in mind - simple on the outside, but complex and efficient behind the scenes. 
-                        </h3>
+                        
                     </div>
                 </section>
                 <!-- Section for the process related information -->
@@ -127,7 +123,7 @@
                                 <br><br>
                                 When you choose The Cyber Architect, you're choosing to embrace the future of web design. Don't let your website get left behind.
                             </p>
-                            <h2>Buy Now</h2>
+                            <h2 id="myBtn1">Buy Now</h2>
                         </div>
                     </div>
                     <div class="seo row">
@@ -141,7 +137,7 @@
                                 <br><br>
                                 Let our SEO techniques take your search results to the next level.
                             </p>
-                            <h2>Buy Now</h2>
+                            <h2 id="myBtn2">Buy Now</h2>
                         </div>
                         <div class="seo-img-div col-5">
                             <img src="Images/main/business.png" id="seo-img">
@@ -185,6 +181,80 @@
                     
                 </section> 
                 <!-- END PORTFOLIO -->
+                
+                 <!-- The Modal -->
+                <div id="myModal" class="modal">
+                    
+                    <!-- Modal content -->
+                    <div class="services-modal">
+                        <div class="service-header">
+                            <span class="close">&times;</span>
+                            <h1>Service Request</h1>
+                            <h4>This could be the start of something beautiful...</h4>
+                        </div>
+                        
+                        
+                        <form class="service-form" action="email.php" method="post">
+                            <label for="fname">First Name</label>
+                            <input type="text" id="fname" name="firstname" placeholder="Your name..." required>
+                            
+                            <label for="lname">Last Name</label>
+                            <input type="text" id="lname" name="lastname" placeholder="Your last name..." required>
+                            
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="Your email here..." required>
+                            
+                            <label for="service">Service</label>
+                            <select id="services" name="services" required>
+                                <option value="design">Web Design</option>
+                                <option value="seo">Search Engine Optimization</option>
+                                <option value="other">Other</option>
+                            </select>
+                            
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" required></textarea>
+                            
+                            <input type="submit">
+                        </form>
+                    </div>
+                </div>
+                
+                <script>
+                    //Get the modal
+                    var modal = document.getElementById('myModal');
+                    
+                    //Get the button that opens the modal
+                    var btn1 = document.getElementById('myBtn1');
+                    var btn2 = document.getElementById('myBtn2');
+                    
+                    //Get the close button
+                    var span = document.getElementsByClassName('close')[0];
+                    
+                    btn1.onclick = function()
+                    {
+                        modal.style.display="block";
+                    }
+                    
+                    btn2.onclick = function()
+                    {
+                        modal.style.display="block";
+                    }
+                    
+                    span.onclick = function()
+                    {
+                        modal.style.display="none"
+                    }
+                    
+                    window.onclick = function(event)
+                    {
+                        if(event.target == modal)
+                        {
+                            modal.style.display = "none";
+                        }
+                    }
+            
+            
+                </script>
                 
 
                 

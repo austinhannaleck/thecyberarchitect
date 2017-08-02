@@ -2,11 +2,12 @@
 * GENERAL STYLING
 ********************************************/
 * {
+    font-family: 'Coda', sans-serif;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Coda', sans-serif;
 }
+
 
 /* Regular columns */
 .col-1 {width: 8.33%;}
@@ -235,7 +236,9 @@ p{
 
 .intro-div
 {
+    font-family: 'Lato', sans-serif;
     height: 500px;
+    padding: 150px 100px;
     background-image: url(Images/main/modern-buildings_dark.png);
     background-size: cover;
     background-attachment: fixed;
@@ -243,11 +246,28 @@ p{
     text-align: center;
 }
 
+.intro-div h1
+{
+    font-weight: normal;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+
+.intro-div h3
+{
+    text-transform: uppercase;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+
+
 /* TURN THIS INTO SCRIPT */
 @media only screen and (max-width: 1300px)
 {
     .intro-div
     {
+        padding: 125px 75px;
         height: 600px;
     }
 }
@@ -256,6 +276,7 @@ p{
 {
     .intro-div
     {
+        padding: 100px 50px;
         height: 700px;
     }
 }
@@ -264,6 +285,7 @@ p{
 {
     .intro-div
     {
+        padding: 75px 25px;
         height: 800px;
     }
 }
@@ -272,7 +294,7 @@ p{
 {
     .intro-div
     {
-        height: 950px;
+        height: 900px;
     }
 }
 
@@ -302,13 +324,7 @@ p{
     }
 }
 
-.intro-div h1
-{
-    padding: 10px 0;
-    background-color: rgba(0,0,0,0.2);
-    text-transform: uppercase;
-    position: relative;
-}
+.
 
 @keyframes IntroAppear
 {
@@ -744,6 +760,14 @@ p{
     width: 50%;
     animation-name: modalAppear;
     animation-duration: 0.4s;
+}
+
+@media only screen and (max-width: 750px)
+{
+    .services-modal
+    {
+        width: 90%;
+    }
 }
 
 /* Animation for modal */
