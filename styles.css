@@ -1,3 +1,10 @@
+/***********************************************
+*
+* 1. Fix line height in intro div
+* 2. Fix flex in processes
+* 
+************************************************/
+
 /********************************************
 * GENERAL STYLING
 ********************************************/
@@ -57,6 +64,8 @@
         width: 100%;
         text-align: center;
     }
+    
+    
 }
 
 a{
@@ -263,50 +272,23 @@ p{
 
 
 /* TURN THIS INTO SCRIPT */
-@media only screen and (max-width: 1300px)
+
+@media only screen and (max-width: 1000px)
 {
     .intro-div
     {
-        padding: 125px 75px;
+        padding: 150px 75px;
         height: 600px;
     }
 }
-
-@media only screen and (max-width: 1100px)
-{
-    .intro-div
-    {
-        padding: 100px 50px;
-        height: 700px;
-    }
-}
-
-@media only screen and (max-width: 800px)
-{
-    .intro-div
-    {
-        padding: 75px 25px;
-        height: 800px;
-    }
-}
-
-@media only screen and (max-width: 700px)
-{
-    .intro-div
-    {
-        height: 900px;
-    }
-}
-
 
 
 /* Change font-sizes for smaller screens and change intro div height to fit text */
 @media only screen and (max-width: 600px)
 {
-    
     .intro-div
     {
-        height: 850px;
+        padding: 100px 25px;
     }
     h1
     {
@@ -476,6 +458,7 @@ p{
 .services p
 {
     font-size: 1.5em;
+    margin-bottom: 10px;
 }
 .services-intro
 {
@@ -490,14 +473,61 @@ p{
     text-shadow: 1px 1px rgb(100,100,100);
 }
 
+.services-main
+{
+    display: flex;
+    padding: 20px;
+}
+
+.service-block
+{
+    border-radius: 10px;
+    border: 5px solid rgb(210,210,210);
+    text-align: center;
+    background-color: rgba(0, 119, 256, 1);
+}
+
+/* Change service-block to block display to avoid containers with excessive height*/
+@media only screen and (max-width: 1065px)
+{
+    .services-main
+    {
+        display: block;
+    }
+}
+
+.service-block h1
+{
+    background-color: rgba(0, 106, 246, 1);
+}
+
+.service-block h2
+{
+    cursor: pointer;
+    background-color: rgba(0, 106, 246, 1);
+    transition: background-color 0.3s ease-in;
+}
+
+.service-block h2:hover
+{
+    background-color: rgba(0, 96, 236, 1);
+}
+
+.service-block img
+{
+    max-width: 100%;
+    margin-bottom: 10px;
+}
 .web-design, .seo
 {
+    text-align: center;
     padding: 20px 15px 20px 15px;;
 }
 
-.web-design-img
+.web-design-img img
 {
     text-align: center;
+    max-width: 100%;
 }
 
 .seo
