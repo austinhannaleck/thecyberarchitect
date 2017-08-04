@@ -12,11 +12,14 @@ $subject = "The Cyber Architect - New Form Submission";
 
 print_r($_POST);
 
+/*
 echo "<br>" . $fname . " " . $lname . "<br>";
 echo $email . "<br>";
 echo $service . "<br>";
 echo $message;
+*/
 
+echo "Thank you for your submission, we will get back to you soon!";
 
 $msg = "$fname\n" .
         "$lname\n" .
@@ -25,5 +28,7 @@ $msg = "$fname\n" .
         "$message";
 
 mail($to, $subject, $msg, 'From:' . $email);
+
+header("url: index.html");
 
 ?>
