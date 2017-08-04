@@ -10,7 +10,7 @@ $subject = "The Cyber Architect - New Form Submission";
 
 
 
-print_r($_POST);
+/* print_r($_POST); */
 
 /*
 echo "<br>" . $fname . " " . $lname . "<br>";
