@@ -29,6 +29,4 @@ $msg = "$fname\n" .
 
 mail($to, $subject, $msg, 'From:' . $email);
 
-header("url: index.html");
-
 ?>

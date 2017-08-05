@@ -186,13 +186,13 @@
                     <!-- Modal content -->
                     <div class="services-modal">
                         <div class="service-header">
-                            <span class="close">&times;</span>
+                            <span id="close">&times;</span>
                             <h1>Service Request</h1>
                             <h4>This could be the start of something beautiful...</h4>
                         </div>
                         
                         
-                        <form class="service-form" action="email.php" method="post">
+                        <form id="service-form">
                             <label for="fname">First Name</label>
                             <input type="text" id="fname" name="firstname" placeholder="Your name..." required>
                             
@@ -214,8 +214,74 @@
                             
                             <input type="submit">
                         </form>
+                        <div id="result">
+                                
+                        </div>
                     </div>
                 </div>
+                
+                <script>
+                    
+                    function ResetForm()
+                    {
+                        // Clear the results div
+                        $("#result").html("");
+                        
+                        // Clear all fields
+                        $("#service-form").find('input:text, input:password, input:file, select, textarea').val('');
+                        $("#service-form").find('input[type=email]').val('');
+                        $("#service-form").find('input:radio, input:checkbox')
+                            .removeAttr('checked').removeAttr('selected');
+                        
+                        // Make sure form is visible
+                        $("#service-form").show();
+                        
+                        // Make sure results is hidden
+                        $("#result").hide();
+                    }
+                    
+                    $("#close").click(function()
+                    {
+                        ResetForm();
+                        modal.style.display="none"
+                    });  
+                    
+                    // Bind to the submit event of the service form
+                    $("#service-form").submit(function(event)
+                    {
+                        var ajaxRequest;
+                        
+                        // Stop form from submitting normally
+                        event.preventDefault();
+                        
+                        var values = $(this).serialize();
+                        
+                        // Clear result div
+                        $("#result").html('');
+                        
+                        // Send the data using post and put the results in a div
+                        ajaxRequest = $.ajax({
+                            url: "email.php",
+                            type: "post",
+                            data: values
+                        })
+                        
+                        // Request can be aborted by ajaxRequest.abort()
+                        
+                        // Update results with SUCCESS
+                        ajaxRequest.done(function (response, textStatus, jqXHR)
+                        {
+                            $("#service-form").hide();
+                            $("#result").show();
+                            $("#result").html("Thank you for your submission, we will respond promptly!");
+                        });
+                        
+                        ajaxRequest.fail(function()
+                        {
+                            $("#result").html("There was an error during submittal. Please try again later.");                 
+                        });
+                    });
+                </script>
                 
                 <script>
                     //Get the modal
@@ -250,12 +316,8 @@
                             modal.style.display = "none";
                         }
                     }
-            
-            
                 </script>
-                
-
-                
+              
                 <!-- MEET THE ARCHITECT BEGIN -->
                 <section class="meet-me row" id="meetme">
                     <div class="col-7 meet-me-description">

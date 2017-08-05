@@ -779,13 +779,13 @@ p{
 
 
 
-.close{
+#close{
     float: right;
     font-size: 2.5em;
     font-weight: bold;
 }
 
-.close:hover{
+#close:hover{
     color: black;
     text-decoration: none;
     cursor: pointer;
@@ -797,15 +797,23 @@ p{
     background-color: rgb(31, 82, 164);
 }
 
-.service-form{
+#service-form{
     padding: 20px;
     margin-top: 10px;
 }
 
-.service-form label{
+#service-form label{
     font-weight: bold;
     display: block;
     border-bottom: 1px solid grey;
+}
+
+/* Used for form submission results. Not displayed by default */
+#result
+{
+    display: none;
+    text-align: center;
+    padding: 100px;
 }
 
 input, select, textarea{
