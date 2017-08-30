@@ -381,16 +381,6 @@ p{
     background-color: rgb(210,210,210);
     color: rgb(80,80,80);
     text-align: center;
-    animation-name: fromLeft;
-}
-
-@keyframes slideFromLeft
-{
-    0%
-    {
-        
-    }
-    
 }
 
 /* Row for grouping of process blocks */
@@ -400,10 +390,11 @@ p{
     float: left;
 }
 
-/* Process block - contains image and descriion for an individual process item */
+/* Process block - contains image and description for an individual process item */
 .process-block
 {
     display: flex;
+    position: relative;
 }
 
 /* Change process-block to block display to avoid containers with excessive height*/
@@ -767,10 +758,10 @@ p{
 
 /* This is the actual service modal */
 .services-modal{
+    position: relative;
     color: black;
     background-color: white;
     margin: auto;
-    border: 1px solid black;
     width: 50%;
     animation-name: modalAppear;
     animation-duration: 0.4s;

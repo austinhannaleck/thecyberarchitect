@@ -15,10 +15,13 @@
         <meta name="viewport" content="width=400px, maximum-scale=1.0" />
        
         <link rel="stylesheet" href="styles.css"/>
+        <link rel="stylesheet" href="animations.css"/>
+        
         <link href="https://fonts.googleapis.com/css?family=Coda|Lato" rel="stylesheet">
         <link rel="icon" href=""/> <!-- Icon for tab-->
         <script type="text/javascript" language="Javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
         <script src="responsive.js"></script>
+        <script src="ScrollView.js"></script>
     
     </head>
     <body>
@@ -51,7 +54,7 @@
                     </div>
                     <div class="process-div-row">
                         <!-- Process block is flex container, so all items within each block are contained within separate divs -->
-                        <div class="col-6 process-block">
+                        <div data-position="bottom" class="col-6 process-block notViewed animBlock">
                             <div>
                                 <img src="Images/brain.png">
                             </div>
@@ -63,7 +66,7 @@
                             </div>
                             
                         </div>
-                        <div class="col-6 process-block">
+                        <div data-position="bottom" class="col-6 process-block notViewed animBlock">
                             <div>
                                 <img src="Images/hardhat.png">
                             </div>
@@ -77,7 +80,7 @@
                         </div>
                     </div>
                     <div class="process-div-row">
-                        <div class="col-6 process-block">
+                        <div data-position="bottom" class="col-6 process-block notViewed animBlock">
                             <div>
                                 <img src="Images/cog.png">
                             </div>
@@ -89,7 +92,7 @@
                             </div>
                             
                         </div>
-                        <div class="col-6 process-block">
+                        <div data-position="bottom" class="col-6 process-block notViewed animBlock">
                             <div>
                                 <img src="Images/devices.png">
                             </div>
