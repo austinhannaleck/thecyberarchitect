@@ -1,6 +1,6 @@
 $(function()
  {
-    var $blocks = $('.animBlock.notViewed');// Get all blocks that are going to be affected by the scroll view animation.
+    var $blocks = $('.animatedBlock.notViewed');// Get all blocks that are going to be affected by the scroll view animation.
     var $window = $(window);// Window object.
     
     $window.on('scroll', function(e)
@@ -51,11 +51,14 @@ function isScrolledIntoView(elem)
     {
         // Once an element is visible exchange the classes
         $(elem).removeClass('notViewed').addClass('viewed');
-        var animElemsLeft = $('.animBlock.notViewed').length;
+        
+        
+        var animElemsLeft = $('.animatedBlock.notViewed').length;
         if(animElemsLeft == 0)
         {
             // With no animated elements left, debind the scroll event
             $(window).off('scroll');
         }
+        
     }
 }

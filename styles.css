@@ -387,6 +387,7 @@ p{
 .process-div-row
 {
     width: 100%;
+    display: flex;
     float: left;
 }
 
@@ -394,8 +395,8 @@ p{
 .process-block
 {
     display: flex;
-    position: relative;
 }
+
 
 /* Change process-block to block display to avoid containers with excessive height*/
 @media only screen and (max-width: 1400px)
@@ -404,6 +405,13 @@ p{
     {
         display: block;
     }
+    
+    .process-div-row
+{
+    width: 100%;
+    display: block;
+    float: left;
+}
 }
 
 
@@ -836,18 +844,20 @@ textarea{
     resize: none;
 }
 
-input[type=text]:focus{
+input[type=text]:focus, input[type=email]:focus{
     border: 3px solid #ccc;
 }
 
 input[type=submit]{
     color: white;
     background-color: rgb(31, 82, 164);
+    transition: all .5s;
     
 }
 
 input[type=submit]:hover{
     background-color: rgb(11, 62, 144); 
+    cursor: pointer;
 }
 
 /********************************************
